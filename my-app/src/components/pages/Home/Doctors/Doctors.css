@@ -1,0 +1,102 @@
+.doctors {
+    padding: var(--padding-2000px);
+}
+
+.doctors h1 {
+    text-transform: uppercase;
+    font-family: "Unbounded";
+    font-size: var(--text-hero-title);
+}
+
+.doctors p {
+    font-size: var(--default-title-text);
+    font-family: "Open Sans";
+    padding-top: 30px;
+}
+
+.doctors-items {
+    display: flex;
+    gap: 40px;
+    padding-top: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+}
+
+.doctor-item {
+    position: relative;
+    width: 300px;
+    height: 650px;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: var(--radius-mini-block);
+    overflow: hidden;
+    scroll-snap-align: start; 
+}
+
+.doctor-item:hover button {
+    display: block;
+}
+
+.doctor-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.488);
+}
+
+.doctor-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 0.5s ease;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, #00000065 100%);
+}
+
+.doctor-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.doctor-text {
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+    right: 5%;
+}
+
+.doctor-text p {
+    font-size: var(--default-text);
+    color: var(--white-background);
+    padding-top: 5px;
+}
+
+.doctor-text p:nth-of-type(1) {
+    font-size: 15px;
+    color: #dddddd;
+}
+
+.doctor-text button {
+    display: none;
+    margin-top: 20px;
+}
+
+.arrows {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+@media(max-width: 1440px) {
+    .doctors {
+        padding: var(--padding-1440px);
+    }
+}
+
+@media(max-width: 1024px) {
+    .doctor-item {
+        height: 450px;
+    }
+}

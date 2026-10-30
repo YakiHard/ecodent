@@ -1,0 +1,19 @@
+:root {
+    /* color */
+    --text-color: #333333;
+    --main-background: #D6EF9D;
+    --white-background: #ffffff;
+    /* shodow */
+    --button-shodow: 0px 0px 50px 0px rgba(34, 60, 80, 0.3);
+    /* radius */
+    --radius-block: 50px;
+    --radius-mini-block: 10px;
+    --radius-big-block: 100px;
+    /* font-size */
+    --text-hero-title: clamp(30px, 2.3vw, 70px); 
+    --default-title-text: clamp(20px, 1.2vw, 75px);
+    --default-text: clamp(15px, 1vw, 70px);
+    /* padding */
+    --padding-2000px: 50px 100px;
+    --padding-1440px: 50px 20px;
+}

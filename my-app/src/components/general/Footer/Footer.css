@@ -1,0 +1,60 @@
+.footer {
+    padding: var(--padding-2000px);
+    background-color: var(--main-background);
+    border-top-left-radius: var(--radius-big-block);
+    border-top-right-radius: var(--radius-big-block);
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.name img {
+    max-width: 70px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.name-text h2 {
+    font-family: "Unbounded";
+    font-size: clamp(20px, 2vw, 25px);
+}
+
+.footer-nav {
+    margin-top: 50px;
+    font-family: "Open Sans";
+    font-weight: 500;
+    font-size: var(--default-text);
+}
+
+.footer-nav p {
+    font-weight: bold;
+    font-size: clamp(20px, 1.1vw, 75px);
+}
+
+.name-text p {
+    font-family: "Unbounded";
+    font-weight: 300;
+    font-size: clamp(10px, 2vw, 15px);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+    margin: 7px 0;
+    list-style: none;
+}
+
+.navigation li {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navigation li:hover {
+    transform: translateY(-5px); 
+}
