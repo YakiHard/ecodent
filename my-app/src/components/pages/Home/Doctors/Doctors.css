@@ -1,5 +1,6 @@
 .doctors {
     padding: var(--padding-2000px);
+    scroll-margin-top: 100px;
 }
 
 .doctors h1 {
@@ -16,7 +17,7 @@
 
 .doctors-items {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     padding-top: 30px;
     overflow-x: auto;
     scrollbar-width: none;
@@ -26,7 +27,7 @@
 .doctor-item {
     position: relative;
     width: 300px;
-    height: 650px;
+    height: 500px;
     flex-shrink: 0;
     cursor: pointer;
     border-radius: var(--radius-mini-block);
@@ -98,5 +99,11 @@
 @media(max-width: 1024px) {
     .doctor-item {
         height: 450px;
+    }
+}
+
+@media(max-width: 426px) {
+    .doctor-item {
+        height: 400px;
     }
 }

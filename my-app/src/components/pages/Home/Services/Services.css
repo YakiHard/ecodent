@@ -1,6 +1,7 @@
 .services {
     padding: var(--padding-2000px);
     font-family: "Unbounded";
+    scroll-margin-top: 100px;
 }
 
 .services h1 {
@@ -23,7 +24,7 @@
 }
 
 .service-info {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .services-item img {

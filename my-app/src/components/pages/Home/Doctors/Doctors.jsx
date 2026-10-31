@@ -1,6 +1,7 @@
 import "./Doctors.css"
+import Button from "../../../UI/Button/Button.jsx"
 
-function Doctors({data}) {
+function Doctors({data, openForm}) {
     
     const BtnLeft = () => {
         document.querySelector('.doctors-items').scrollBy({
@@ -17,7 +18,7 @@ function Doctors({data}) {
     }
 
     return (
-        <section className="doctors">
+        <section className="doctors" id="doctors">
             <h1>наши специалисты</h1>
             <p>У нас работают только лучшие специалисты с многолетней практикой и доказанным опытом. Врачи клиники «Экодент» находят индивидуальный подход к каждому, обеспечивая заботу и внимание как взрослым, так и детям.</p>
             <div className="doctors-items">
@@ -27,14 +28,14 @@ function Doctors({data}) {
                         <div className="doctor-text">
                             <p>{doctor.specialization}</p>
                             <p>{doctor.name}</p>
-                            <button>Запись онлайн</button>
+                            <Button onClick={openForm}>Запись онлайн</Button>
                         </div>
                     </div>
                 ))}
             </div>
             <div className="arrows">
-                <button onClick={BtnLeft}>&lt;</button>
-                <button onClick={BtnRight}>&gt;</button>
+                <Button onClick={BtnLeft}>&lt;</Button>
+                <Button onClick={BtnRight}>&gt;</Button>
             </div>
             
         </section>

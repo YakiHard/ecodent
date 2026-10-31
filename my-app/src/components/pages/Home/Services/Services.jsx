@@ -2,7 +2,7 @@ import './Services.css'
 
 function Services({data}) {
     return (
-        <section className="services">
+        <section className="services" id="services">
             <h1>УСЛУГИ <br /> СТОМАТОЛОГИИ</h1>
             <div className="services-items">
                 {data.map((service) => (

@@ -4,6 +4,7 @@
     align-items: center;
     gap: 100px;
     font-family: "Open Sans";
+    scroll-margin-top: 100px;
 }
 
 .leader img {

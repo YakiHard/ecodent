@@ -2,7 +2,7 @@ import './Leader.css'
 
 function Leader() {
     return (
-        <section className="leader" id="about">
+        <section className="leader" id="leader">
             <div className="leader-lft">
                 <img src="leader.png" />
             </div>

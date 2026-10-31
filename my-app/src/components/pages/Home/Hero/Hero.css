@@ -1,9 +1,10 @@
 .hero {
     padding: 150px 100px;
+    
 }
 
 .hero-container {
-    padding: 150px;
+    padding: 100px;
     background-color: var(--main-background);
     border-radius: var(--radius-block);
     position: relative;
@@ -38,7 +39,7 @@
 
 .hero-rth img {
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
     pointer-events: none;
 }
 
@@ -95,7 +96,7 @@
 
 @media(max-width: 2000px) {
     .hero {
-        padding: 200px 100px;
+        padding: 180px 100px;
     }
 }
 

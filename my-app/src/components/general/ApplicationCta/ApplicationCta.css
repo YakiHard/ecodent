@@ -1,0 +1,126 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.267);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 10000;
+    font-family: "Open Sans";
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    overflow-y: auto;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cta {
+    background-color: var(--white-background);
+    padding: 30px 30px 50px;
+    border-radius: var(--radius-block);
+    max-width: 700px;
+    box-sizing: border-box;
+    margin: auto;
+    position: relative;
+}
+
+.cta svg {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transform: scale(1.5);
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.cta svg:hover {
+    transform: scale(1.7);
+}
+
+.cta h2 {
+    font-size: var(--text-hero-title);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cta p {
+    font-size: var(--default-text);
+    margin-top: 10px;
+}
+
+.form-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-cta input,
+.form-cta select {
+    padding: 10px 20px;
+    border-radius: var(--radius-block);
+    font-family: "Open Sans";
+    font-size: var(--default-text);
+    border: 1px solid var(--main-background);
+    color: var(--main-background-black);
+}
+
+.form-cta input:focus,
+.form-cta select:focus {
+    border: 1px solid var(--main-background);
+    outline: none;
+}
+
+.form-cta input::placeholder {
+    color: var(--main-background-black);
+}
+
+.form-cta input[type="checkbox"] {
+    width: 50px;
+    height: 50px;
+    accent-color: var(--main-background);
+    cursor: pointer;
+}
+
+.agree {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.agree p {
+    margin: 0;
+}
+
+.btnCta {
+    margin-top: 20px;
+}
+
+.errorMessage {
+    background-color: var(--error);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.errorMessage p {
+    margin: 0;
+    color: var(--white-background);
+}
+
+@media (max-width: 426px) {
+    .cta {
+        border-radius: 0;
+    }
+    
+}

@@ -5,7 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 import Button from '../../UI/Button/Button'
 import { useEffect, useState } from 'react';
 
-function Menu() {
+function Menu({closeForm}) {
     const [isBurger, setBurger] = useState(false)
 
     const OpenMenu = () => {
@@ -25,7 +25,7 @@ function Menu() {
         if(element) {
             element.scrollIntoView({behavior: 'smooth'})
         }
-        setBurger(!isBurger)
+        setBurger(false)
     }
 
     return (
@@ -42,12 +42,11 @@ function Menu() {
                             <RxCross2 onClick={OpenMenu}/>
                         </div>
                         <ul className="menu-nav">
-                            <li onClick={() => ScrollSection('about')}>О клинике</li>
-                            <li>Врачи</li>
+                            <li onClick={() => ScrollSection('leader')}>О клинике</li>
+                            <li onClick={() => ScrollSection('doctors')} >Врачи</li>
                             <li>Вакансии</li>
-                            <li>Услуги</li>
-                            <li>Цены</li>
-                            <li>Акции</li>
+                            <li>Статьи</li>
+                            <li onClick={() => ScrollSection('services')}>Услуги</li>
                             <li>Контакты</li>
                         </ul>
                         <div className="menu-contacts">
@@ -59,7 +58,7 @@ function Menu() {
                                 <SiVk />
                                 <FaTelegram />
                             </div>
-                            <Button>Заказать звонок</Button>
+                            <Button onClick={closeForm}>Заказать звонок</Button>
                         </div>  
                     </div>
                 </div>
@@ -72,7 +71,7 @@ function Menu() {
                         <SiVk />
                         <FaTelegram />
                     </div>
-                    <Button>Заказать звонок</Button>
+                    <Button onClick={closeForm}>Заказать звонок</Button>
                 </div>  
                 <div className="burger" onClick={OpenMenu}>
                     <span></span>
