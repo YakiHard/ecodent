@@ -8,14 +8,26 @@ import Faq from './components/pages/Home/Faq/Faq.jsx'
 import Footer from './components/general/Footer/Footer.jsx'
 import Doctors from "./components/pages/Home/Doctors/Doctors.jsx"
 import ApplicationCta from './components/general/ApplicationCta/ApplicationCta.jsx'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Shipped from './components/general/Shipped/Shipped.jsx'
 
 function App() {
   const[isOpenForm, setOpenForm] = useState(false)
+  const[shipped, setShipped] = useState(false)
+
+  useEffect(() => {
+    if(shipped) {
+      setTimeout(() => {
+        setShipped(false)
+      }, 3000)
+    }
+  }, [shipped])
+  
   return (
     <BrowserRouter>
     <Menu closeForm={() => setOpenForm(!isOpenForm)}/>
-    <ApplicationCta closeForm={() => setOpenForm(false)} isOpen={isOpenForm}/>
+    <ApplicationCta closeForm={() => setOpenForm(false)} isOpen={isOpenForm} openShipped={() => setShipped(true)}/>
+    <Shipped shipped={shipped}/>
       <Routes>
         <Route path='/' element={
           <>

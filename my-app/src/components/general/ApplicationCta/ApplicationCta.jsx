@@ -3,23 +3,23 @@ import "./ApplicationCta.css"
 import Button from "../../UI/Button/Button.jsx"
 import { RxCross2 } from "react-icons/rx";
 
-function ApplicationCta({closeForm, isOpen}) {
+function ApplicationCta({closeForm, isOpen, openShipped}) {
     const[isTopic, setTopic] = useState("")
     const[fio, setFio] = useState("")
     const[tel, setTel] = useState("")
     const[agree, setAgree] = useState("")
     const[error, setError] = useState(false)
+    const[shipped, setShipped] = useState(false)
     const handleOverlayClick = (event) => {
         if(event.target === event.currentTarget) {
             closeForm()
+            setError(false)
         }
     }
     const check = () => {
         if(!fio || !tel) {
             setError(true)
-        } else {
-            alert("Прошел проверку")
-        }
+        } 
     }
     return (
         <section className={`modal ${isOpen? 'active' : ""}`} onClick={handleOverlayClick}>
